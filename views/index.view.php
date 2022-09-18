@@ -1,14 +1,3 @@
-<!-- <?php
-//Step 3 
-$greeting = 'Hello Worlds';
-
-echo  'Hello, ' . $greeting;
-
-//or
-echo "Hello, $greeting";
-
-?> when is only php is good practice to leave the closing out -->
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -17,17 +6,20 @@ echo "Hello, $greeting";
     <meta charset="UTF-8">
 
     <title>Document</title>
-    <style>
-        header {
-            background: #3e3e3e;
-            padding: 2em;
-            text-align: center;
-        }
 
-    </style>
 </head>
 
 <body>
+
+<nav>
+    <ul>
+        <li><a href="/about">About Page</a></li>
+        <li><a href="/about-culture">About Culture Page</a></li>
+        <li><a href="/contact">Contact Page</a></li>
+    </ul>
+</nav>
+
+<h1>My Tasks</h1>
 
     <?php foreach ($tasks as $task) : ?>
         <li>
