@@ -1,6 +1,10 @@
 <?php
 
-use FTP\Connection as FTPConnection;
+namespace App\Core\Database;
+use PDO;
+use PDOException;
+
+//use FTP\Connection as FTPConnection;
 
 class Connection
 
