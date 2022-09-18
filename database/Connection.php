@@ -4,14 +4,20 @@ use FTP\Connection as FTPConnection;
 
 class Connection
 
+//The stactic means the function is available globally and is not necessary to call the new Connection, just connection::make (the colon colon means is calling a stactic method)
 {
-    public static function make() //The stactic means the function is available globally and is not necessary to call the new Connection, just connection::make (the colon colon means is calling a stactic method)
+    public static function make($config) 
     {
         try {
     
-            return $pdo = new PDO('mysql:host=127.0.0.1;dbname=mytodo', 'root', 'root');
+            return new PDO(
+                $config['connection'].';dbname='.$config['name'],
+                $config['username'],
+                $config['password'],
+                $config['options']
+            );
          
-         } catch (PDOException $e){
+         } catch (\PDOException $e){
              
              die($e->getMessage());
          }
