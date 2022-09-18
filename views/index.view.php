@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-
-    <title>Document</title>
-
-</head>
-
-<body>
-
-<nav>
-    <ul>
-        <li><a href="/about">About Page</a></li>
-        <li><a href="/about-culture">About Culture Page</a></li>
-        <li><a href="/contact">Contact Page</a></li>
-    </ul>
-</nav>
+<?php require('partials/head.php');?>
 
 <h1>My Tasks</h1>
 
@@ -35,6 +16,5 @@
         </li>
 
     <?php endforeach; ?>
-</body>
 
-</html>
+    <?php require('partials/footer.php'); ?>
